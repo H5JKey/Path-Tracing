@@ -172,7 +172,11 @@ vec3 render(vec3 ro,vec3 rd) {
       
       color*=f*hitInfo.color;
       if (hitInfo.opacity>0) {
-        rd=refract(rd,hitInfo.normal,hitInfo.opacity);
+        vec3 refracted=refract(rd,hitInfo.normal,hitInfo.opacity);
+        if (refracted==vec3(0.0))
+            rd=reflect(rd,hitInfo.normal);
+        else
+            rd=refracted;
         ro=hitInfo.farPoint;
       }
       else {
