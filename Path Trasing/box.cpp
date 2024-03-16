@@ -17,20 +17,12 @@ sf::Vector3f Box::getSize() {
 	return size;
 }
 
-sf::Vector3f Box::getColor() {
-	return material.color;
-}
-
-
-float Box::getDiffuseness() {
-	return material.diffuseness;
-}
-
-float Box::getOpacity()
+Material& Box::getMaterial()
 {
-	return material.opacity;
+	return material;
 }
 
-bool Box::isLightEmitter() {
-	return material.lightEmitter;
+bool Box::collide(sf::Vector3f point)
+{
+	return (point.y < position.y + size.y && point.y > position.y - size.y) && (point.x >position.x - size.x && point.x <position.x + size.x) && (point.z >position.z - size.z && point.z <position.z + size.z);
 }

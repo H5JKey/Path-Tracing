@@ -1,4 +1,5 @@
 #pragma once
+#include "world.h"
 #include <SFML/Graphics.hpp>
 
 class Player
@@ -15,5 +16,8 @@ public:
 	bool rotate(const sf::RenderWindow& window);
 	sf::Vector3f getPosition();
 	sf::Vector3f getRotation();
+
+	Sphere* getSphereLookingAt(World& world, float& distance);
+	Box* getBoxLookingAt(World& world, float& distance);
 };
 

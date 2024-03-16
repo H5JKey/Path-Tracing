@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "render.h"
 #include "player.h"
+#include "world.h"
 
 
 class PathTracingProgramm
@@ -13,9 +14,7 @@ public:
     sf::Time programmTime;
     sf::Clock clock;
     bool rotating;
-
-    std::vector<Box> boxes;
-    std::vector<Sphere> spheres;
+    World world;
     Player player;
 
 public:

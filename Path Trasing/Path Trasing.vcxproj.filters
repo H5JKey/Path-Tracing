@@ -40,6 +40,7 @@
     <ClCompile Include="sphere.cpp">
       <Filter>.cpp</Filter>
     </ClCompile>
+    <ClCompile Include="world.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\imgui\imgui.h">
@@ -87,6 +88,7 @@
     <ClInclude Include="sphere.h">
       <Filter>.h</Filter>
     </ClInclude>
+    <ClInclude Include="world.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="shader.glsl" />

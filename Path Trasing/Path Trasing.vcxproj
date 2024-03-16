@@ -32,6 +32,7 @@
     <ClCompile Include="player.cpp" />
     <ClCompile Include="render.cpp" />
     <ClCompile Include="sphere.cpp" />
+    <ClCompile Include="world.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="box.h" />
@@ -49,6 +50,7 @@
     <ClInclude Include="player.h" />
     <ClInclude Include="render.h" />
     <ClInclude Include="sphere.h" />
+    <ClInclude Include="world.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\x64\Release\openal32.dll" />

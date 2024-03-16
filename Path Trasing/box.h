@@ -17,19 +17,12 @@ private:
 public:
 
 	Box() {};
-
 	Box(sf::Vector3f position, sf::Vector3f size, sf::Vector3f color, float diffusness, float opacity, bool lighEmitter);
 
 	sf::Vector3f getPosition();
-
 	sf::Vector3f getSize();
+	Material& getMaterial();
 
-	sf::Vector3f getColor();
-
-	float getDiffuseness();
-
-	float getOpacity();
-
-	bool isLightEmitter();
+	bool collide(sf::Vector3f point);
 };
 

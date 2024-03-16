@@ -3,6 +3,7 @@
 #include "box.h"
 #include "sphere.h"
 #include "player.h"
+#include "world.h"
 
 
 struct Settings {
@@ -20,20 +21,23 @@ class Render
 {
 	
 	sf::Shader shader;
-	std::vector<sf::RenderTexture> textures;
-	std::vector<sf::Sprite> sprites;
-	std::vector<sf::Sprite> flippedSprites;
+	sf::RenderTexture texture;
+	sf::Sprite sprite;
+	sf::Sprite flippedSprite;
 
 	int frame;
 	
 public:
 	Settings settings;
 
-	Render(int width, int height);
+	Render(sf::RenderWindow& window);
+	Render();
+
+	void init(sf::RenderWindow& window);
 
 	void operator()(sf::RenderWindow& window);
 
-	void setShaderUniforms(Player player, std::vector<Box>& boxes, std::vector<Sphere>& spheres, sf::Vector2f window_size, sf::Time time);
+	void setShaderUniforms(Player player, World& world, sf::Vector2f window_size, sf::Time time);
 	void resetFrames();
 
 	~Render();

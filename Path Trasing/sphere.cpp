@@ -17,20 +17,12 @@ float Sphere::getSize() {
 	return size;
 }
 
-sf::Vector3f Sphere::getColor() {
-	return material.color;
-}
-
-
-float Sphere::getDiffuseness() {
-	return material.diffuseness;
-}
-
-float Sphere::getOpacity()
+bool Sphere::collide(sf::Vector3f point)
 {
-	return material.opacity;
+	return ((point.x - position.x) * (point.x - position.x) + (point.y - position.y) * (point.y - position.y) + (point.z - position.z) * (point.z - position.z) <= size * size);
 }
 
-bool Sphere::isLightEmitter() {
-	return material.lightEmitter;
+Material& Sphere::getMaterial()
+{
+	return material;
 }
