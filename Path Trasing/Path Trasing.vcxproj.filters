@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="lib\imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\imgui_stdlib.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\imgui-SFML.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="path_tracing.cpp">
+      <Filter>.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="render.cpp">
+      <Filter>.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="box.cpp">
+      <Filter>.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="sphere.cpp">
+      <Filter>.cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imconfig-SFML.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imgui_stdlib.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imgui-SFML.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imgui-SFML_export.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\imgui\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="path_tracing.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="render.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="box.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="sphere.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shader.glsl" />
+    <None Include="..\x64\Release\sfml-window-2.dll">
+      <Filter>dlls</Filter>
+    </None>
+    <None Include="..\x64\Release\sfml-system-2.dll">
+      <Filter>dlls</Filter>
+    </None>
+    <None Include="..\x64\Release\sfml-graphics-2.dll">
+      <Filter>dlls</Filter>
+    </None>
+    <None Include="..\x64\Release\openal32.dll">
+      <Filter>dlls</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include=".h">
+      <UniqueIdentifier>{0e2da8b9-994a-4a8b-91ff-158f0962da29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{8e000f68-70da-4cc4-91b1-c309907d74de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".cpp">
+      <UniqueIdentifier>{4a73f55c-0a9f-4905-bf67-c483f7c2314a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dlls">
+      <UniqueIdentifier>{0fe68c61-96e8-4c23-96fc-ad3e51db0f0b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
