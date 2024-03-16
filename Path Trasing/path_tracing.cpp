@@ -58,10 +58,30 @@ void PathTracingProgramm::update() {
                 if (selectedSphere) {
                     if (ImGui::Checkbox("Light emission", &selectedSphere->getMaterial().lightEmitter))
                         render.resetFrames();
+                    if (ImGui::SliderFloat("Diffuseness", &selectedSphere->getMaterial().diffuseness, 0, 1))
+                        render.resetFrames();
+                    if (ImGui::SliderFloat("Opacity", &selectedSphere->getMaterial().opacity, 0, 5))
+                        render.resetFrames();
+                    sf::Vector3f color = selectedSphere->getMaterial().color;
+                    float color_array[3] = { color.x, color.y,color.z };
+                    ImGui::ColorPicker3("Color", color_array);
+                    if (color.x!=color_array[0] || color.y != color_array[1] || color.z != color_array[2])
+                        render.resetFrames();
+                    selectedSphere->getMaterial().color = { color_array[0],color_array[1],color_array[2] };
                 }
                 else {
                     if (ImGui::Checkbox("Light emission", &selectedBox->getMaterial().lightEmitter))
                         render.resetFrames();
+                    if (ImGui::SliderFloat("Diffuseness", &selectedBox->getMaterial().diffuseness, 0, 1))
+                        render.resetFrames();
+                    if (ImGui::SliderFloat("Opacity", &selectedBox->getMaterial().opacity, 0, 5))
+                        render.resetFrames();
+                    sf::Vector3f color = selectedBox->getMaterial().color;
+                    float color_array[3] = { color.x, color.y,color.z };
+                    ImGui::ColorPicker3("Color", color_array);
+                    if (color.x != color_array[0] || color.y != color_array[1] || color.z != color_array[2])
+                        render.resetFrames();
+                    selectedBox->getMaterial().color = { color_array[0],color_array[1],color_array[2] };
 
                 }
             }
