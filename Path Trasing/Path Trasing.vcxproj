@@ -28,6 +28,7 @@
     <ClCompile Include="lib\imgui\imgui_stdlib.cpp" />
     <ClCompile Include="lib\imgui\imgui_tables.cpp" />
     <ClCompile Include="lib\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="material.cpp" />
     <ClCompile Include="path_tracing.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="render.cpp" />
@@ -46,6 +47,7 @@
     <ClInclude Include="lib\imgui\imstb_rectpack.h" />
     <ClInclude Include="lib\imgui\imstb_textedit.h" />
     <ClInclude Include="lib\imgui\imstb_truetype.h" />
+    <ClInclude Include="material.h" />
     <ClInclude Include="path_tracing.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="render.h" />

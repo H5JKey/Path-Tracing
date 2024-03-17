@@ -3,8 +3,8 @@
 World::World():boxes(0),spheres(0)
 {
     boxes.push_back(Box(
-        sf::Vector3f{ 5.5 - 20,25.5,94.7 },
-        sf::Vector3f{ 40,40,0.2 },
+        sf::Vector3f{ 5.5, 8.5, 0.5},
+        sf::Vector3f{ 4,4,0.2 },
         sf::Vector3f{ 1,1,1 },
         0, 0, true));
 
@@ -20,11 +20,11 @@ World::World():boxes(0),spheres(0)
         sf::Vector3f{ 0.5,0.5,0.5 },
         0.99, 0, false));
 
-    /* boxes.push_back(Box(
+     boxes.push_back(Box(
          sf::Vector3f{ 0,0,15 },
          sf::Vector3f{ 15,15,0.4 },
          sf::Vector3f{ 1,0,0 },
-         0.8,0, false));*/
+         0.8,0, false));
 
     boxes.push_back(Box(
         sf::Vector3f{ 0,0,0 },
@@ -66,6 +66,16 @@ std::vector<Box>& World::getBoxes()
 std::vector<Sphere>& World::getSpheres()
 {
     return spheres;
+}
+
+void World::addNewBox(Box box)
+{
+    boxes.push_back(box);
+}
+
+void World::addNewSphere(Sphere sphere)
+{
+    spheres.push_back(sphere);
 }
 
 

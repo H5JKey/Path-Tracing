@@ -1,12 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-
-struct Material {
-	sf::Vector3f color;
-	float diffuseness;
-	bool lightEmitter;
-	float opacity;
-};
+#include "material.h"
 
 class Box
 {
@@ -21,8 +15,12 @@ public:
 
 	sf::Vector3f getPosition();
 	sf::Vector3f getSize();
-	Material& getMaterial();
+	Material getMaterial();
 
 	bool collide(sf::Vector3f point);
+
+	void setMaterial(Material material);
+	void setPosition(sf::Vector3f position);
+	void setSize(sf::Vector3f size);
 };
 

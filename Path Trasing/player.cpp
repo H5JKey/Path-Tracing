@@ -94,7 +94,7 @@ Sphere* Player::getSphereLookingAt(World& world, float& distance)
 	sf::Vector3f rd = sf::Vector3f(sin(rotation.y / 180 * 3.1415), (tan(rotation.x / 180 * 3.1415)), cos(rotation.y / 180 * 3.1415));
 	sf::Vector3f ro = position;
 
-	for (float s = 0; s <= 100; s += 0.5) {//  Ray Casting
+	for (float s = 0; s <= 10; s += 0.5) {//  Ray Casting
 		sf::Vector3f p = ro + rd * (s);
 		for (Sphere& sphere : world.getSpheres()) {
 			if (sphere.collide(p)) {
@@ -111,7 +111,7 @@ Box* Player::getBoxLookingAt(World& world, float& distance)
 	sf::Vector3f rd = sf::Vector3f(sin(rotation.y / 180 * 3.1415), (tan(rotation.x / 180 * 3.1415)), cos(rotation.y / 180 * 3.1415));
 	sf::Vector3f ro = position;
 
-	for (float s = 0; s <= 100; s += 0.5) {//  Ray Casting
+	for (float s = 0; s <= 10; s += 0.5) {//  Ray Casting
 		sf::Vector3f p = ro + rd * (s);
 		for (Box& box : world.getBoxes()) {
 			if (box.collide(p)) {

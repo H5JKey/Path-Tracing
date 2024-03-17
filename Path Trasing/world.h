@@ -13,4 +13,7 @@ public:
 
     std::vector<Box>& getBoxes();
     std::vector<Sphere>& getSpheres();
+
+    void addNewBox(Box box);
+    void addNewSphere(Sphere sphere);
 };
