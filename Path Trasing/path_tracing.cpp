@@ -27,6 +27,9 @@ void PathTracingProgramm::update() {
     bool addBox = false;
     bool addSphere = false;
 
+    float factor = GetDpiForWindow(window.getSystemHandle()) / 96.f;
+    ImGui::GetIO().FontGlobalScale = factor;
+
     while (window.isOpen()) {
         ellapsed = clock.restart();
         programmTime += ellapsed;

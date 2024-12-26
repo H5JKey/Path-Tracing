@@ -116,7 +116,7 @@ HitInfo sphereIntersection(vec3 ro, vec3 rd, Sphere sphere)
 #define MAX_DISTANCE 10000
 HitInfo rayCasting(vec3 ro, vec3 rd) {
     HitInfo hitInfo;
-    hitInfo.color=vec3(0,0.0,0);
+    hitInfo.color=vec3(0,0,0);
     hitInfo.distance=MAX_DISTANCE;
     for (int i=0; i<Nbox; i++) {
         HitInfo hit = boxIntersection(ro,rd,boxes[i]);
@@ -160,7 +160,7 @@ vec3 randomOnSphere(vec3 co){
 
 
 vec3 render(vec3 ro,vec3 rd) {
-   vec3 color=vec3(1);
+   vec3 color=vec3(1.0);
    float f=1.0;
    for (int i=0; i<reflections; i++) {
       HitInfo hitInfo=rayCasting(ro,rd);
@@ -186,7 +186,7 @@ vec3 render(vec3 ro,vec3 rd) {
         rd=mix(ideal,rnd,hitInfo.diffuseness);
         ro=hitInfo.point;
       }
-      f*=0.8;   
+      f*=0.9;   
       
    }
    return vec3(0);

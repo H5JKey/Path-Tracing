@@ -3,6 +3,7 @@
 #include "render.h"
 #include "player.h"
 #include "world.h"
+#include <Windows.h>
 
 
 class PathTracingProgramm
