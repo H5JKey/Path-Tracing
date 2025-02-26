@@ -64,7 +64,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8dc9e9e9-4d76-4cb2-9df0-39a5f8ff0cd9}</ProjectGuid>
+    <ProjectGuid>{103FA844-E55F-474D-BC55-45D467CBB95A}</ProjectGuid>
     <RootNamespace>My4DRayMarching</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>Path Tracing</ProjectName>
